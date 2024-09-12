@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Items</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #b1f0e5;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow: hidden;
+            flex-direction: column;
+        }
+
+        .container {
+            position: relative;
+            width: 1400px; 
+            height: 800px;
+            background: #f5f5f5;
+            box-shadow: 0 30px 50px #a3f0e3;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: flex;
+            width: calc(700px * 12); 
+            transition: transform 20s ease-in-out; 
+        }
+
+        .item {
+            min-width: 700px; 
+            height: 800px;
+            margin: 0 10px;
+            border-radius: 20px;
+            box-shadow: 0 30px 50px #cbf7f0;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .item .content {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .content .name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .content .des {
+            font-size: 16px;
+        }
+
+        .container:hover .slide {
+            animation: slide 50s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-1420px); } 
+            40% { transform: translateX(-2840px); }
+            60% { transform: translateX(-4260px); }
+            80% { transform: translateX(-5680px); }
+            100% { transform: translateX(0); }
+        }
+
+      
+        @media (max-width: 420px) {
+            .container {
+                width: 100%;
+                height: 300px;
+            }
+
+            .slide {
+                width: calc(150px * 6);
+            }
+
+            .item {
+                min-width: 150px;
+                height: 200px;
+            }
+
+            .content .name {
+                font-size: 18px;
+            }
+
+            .content .des {
+                font-size: 12px;
+            }
+
+            .container:hover .slide {
+                animation: slideMobile 20s linear infinite;
+            }
+
+            @keyframes slideMobile {
+                0% { transform: translateX(0); }
+                20% { transform: translateX(-160px); }
+                40% { transform: translateX(-320px); }
+                60% { transform: translateX(-480px); }
+                80% { transform: translateX(-640px); }
+                100% { transform: translateX(0); }
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slide">
+            <div class="item">
+                <div class="content">
+                    <img src="./Screenshot 2024-09-12 113113.png" alt="Image 1" width="700" height="800">
+                </div>
+            </div>
+         
+            <div class="item">
+                <div class="content">
+                    <img src="./Screenshot 2024-09-12 113252.png" alt="Image 2" width="700" height="800">
+                </div>
+            </div>
+          
+            <div class="item">
+                <div class="content">
+                   <img src="./Screenshot 2024-09-12 113344.png" alt="Image 3" width="700" height="800">
+                </div>
+            </div>
+ 
+            <div class="item">
+                <div class="content">
+                    <img src="./Screenshot 2024-09-12 113511.png" alt="Image 4" width="700" height="800">
+                </div>
+            </div>
+   
+            <div class="item">
+                <div class="content">
+                    <img src="./Screenshot 2024-09-12 113511.png" alt="Image 5" width="700" height="800">
+                </div>
+            </div>
+     
+            <div class="item">
+                <div class="content">
+                   <img src="./Screenshot 2024-09-12 113738.png" alt="Image 6" width="700" height="800">
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                   <img src="./Screenshot 2024-09-12 113830.png" alt="Image 7" width="700" height="800">
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                   <img src="./Screenshot 2024-09-12 114136.png" alt="Image 8" width="700" height="800">
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                   <img src="./Screenshot 2024-09-12 114226.png" alt="Image 9" width="700" height="800">
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                   <img src="./Screenshot 2024-09-12 114535.png" alt="Image 10" width="700" height="800">
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                   <img src="./Screenshot 2024-09-12 114911.png" alt="Image 11" width="700" height="800">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
